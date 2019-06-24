@@ -1,6 +1,7 @@
 package com.controladores;
 
 import com.dao.EstudianteDaoEnMemoria;
+import com.dao.EstudianteDaoHibernate;
 import com.dao.EstudianteDaoJDBC;
 import com.data.Data;
 import com.idao.IEstudianteDao;
@@ -25,7 +26,7 @@ public class EstudianteController extends HttpServlet {
 
     public EstudianteController() {
         //SE INICIALIZA EL OBJETO DE ACCESO A DATOS
-        dao = new EstudianteDaoJDBC();
+        dao = new EstudianteDaoHibernate();
 
        // Data.listaEstudiantes.add(new Estudiante(3, "juan", 23, "Santa Ana", "Masculino"));
         //Data.listaEstudiantes.add(new Estudiante(6, "Jose", 23, "San Salvador", "Masculino"));
